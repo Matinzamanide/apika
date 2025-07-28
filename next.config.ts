@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    domains: ['rahabsanat.ir','cdn.globalso.com','www.eqm.co.nz','hyperestakhr.com','tasisat510.com'],
+  },};
 
 export default nextConfig;
