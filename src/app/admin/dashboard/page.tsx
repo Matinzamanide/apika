@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 const DashboardPage =async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies(); // <--- Add await here
   const session = cookieStore.get("PHPSESSID");
   // ``;
   const res=await fetch('http://localhost/apitak/orders/submit_order.php');
@@ -26,7 +26,7 @@ const DashboardPage =async () => {
           return <OrderDetails key={item.id} {...item} />
         })
       }
-      
+
     </div>
   );
 };
